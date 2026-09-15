@@ -1,0 +1,19 @@
+SETUP FIREBASE UNTUK VORTEXUS 26
+==============================
+
+1) Firebase Console -> buat project baru.
+2) Project settings -> Add app -> Web. Salin firebaseConfig ke firebase-config.js.
+3) Authentication -> Sign-in method -> aktifkan Email/Password.
+4) Authentication -> Users -> Add user:
+   - 4 akun kelas, misalnya email bebas yang kamu tentukan. Password wajib sama dengan kode kelas agar login website tetap mudah.
+   - 1 akun admin.
+5) Firestore Database -> Create database.
+6) Storage -> Get started. Untuk proyek baru, Cloud Storage for Firebase memerlukan Blaze/pay-as-you-go; penggunaan tanpa biaya tetap tersedia sesuai kuota.
+7) Salin aturan dari firestore.rules dan storage.rules. Pada kedua file, ganti EMAIL_ADMIN@example.com dengan email akun admin.
+8) Isi VORTEXUS_CLASS_ACCOUNTS di firebase-config.js dengan email 4 akun kelas. Isi VORTEXUS_ADMIN_EMAIL dengan email admin.
+9) Upload folder website ke GitHub Pages.
+
+HASIL:
+Upload dari HP/Laptop -> Firebase Storage + Firestore -> Admin approve -> foto langsung muncul di semua perangkat.
+
+JANGAN menaruh password Firebase di firebase-config.js. Firebase Web API key/config memang dipakai di frontend; keamanan utamanya berasal dari Authentication + Security Rules.

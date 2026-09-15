@@ -1,0 +1,19 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function signedIn() { return request.auth != null; }
+    function isAdmin() { return signedIn() && request.auth.token.email == "admin@memory.com"; }
+
+    match /media/{mediaId} {
+      allow read: if isAdmin() || (resource.data.status == "approved");
+      allow create: if signedIn()
+        && request.resource.data.status == "pending"
+        && request.resource.data.uploaderUid == request.auth.uid
+        && request.resource.data.title is string
+        && request.resource.data.uploader is string
+        && request.resource.data.jurusan is string
+        && request.resource.data.type in ["photo", "video"];
+      allow update, delete: if isAdmin();
+    }
+  }
+}

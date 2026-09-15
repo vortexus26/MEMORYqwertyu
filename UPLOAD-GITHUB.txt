@@ -1,0 +1,10 @@
+VORTEXUS 26 - GITHUB PAGES
+
+1. Upload SEMUA ISI ZIP ini ke ROOT repository GitHub Pages.
+2. index.html harus langsung terlihat di root repository.
+3. Jangan upload folder pembungkus.
+4. GitHub Pages Settings > Pages > Deploy from branch > main > /(root).
+5. Setelah deploy, buka /MEMORY/ lalu tekan Ctrl+F5.
+6. Isi firebase-config.js dengan konfigurasi Firebase milik project kamu agar upload online aktif.
+
+Jangan menghapus logo-vortexus.png atau logo-smkn1.png.

@@ -1,0 +1,18 @@
+VORTEXUS 26 — FIRESTORE RULES WAJIB DIPUBLISH
+
+Karena website memakai GitHub Pages, file firestore.rules TIDAK otomatis masuk ke Firebase.
+Lakukan 1 kali di Firebase Console:
+
+1. Buka Firebase Console → project MEMORY (memory-88e71)
+2. Buka Firestore Database → Rules
+3. Hapus isi rules lama
+4. Paste isi file firestore.rules dari ZIP ini
+5. Klik Publish
+
+Rules ini membuat:
+- Semua orang boleh membaca media yang statusnya approved.
+- Pengguna yang login boleh membuat upload berstatus pending miliknya sendiri.
+- Hanya admin@memory.com yang boleh approve/reject/delete.
+
+JANGAN gunakan API secret Cloudinary di website.
+Cloudinary preset yang dipakai website: memory_unsigned (Unsigned).

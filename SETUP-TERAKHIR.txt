@@ -1,0 +1,28 @@
+VORTEXUS 26 — SETUP TERAKHIR
+
+CLOUDINARY
+Cloud name: lpcw7yxt
+Upload preset: memory_unsigned
+Mode: Unsigned
+
+FIREBASE
+Project ID: memory-88e71
+Authentication: Email/Password harus Enabled
+Akun kelas dan admin harus sudah dibuat.
+
+FIRESTORE
+WAJIB Publish isi firestore.rules ke Firestore Database → Rules.
+Mengupload file firestore.rules ke GitHub saja TIDAK menerapkan rules ke Firebase.
+
+SETELAH PUBLISH
+1. Upload semua isi ZIP ke repository GitHub Pages.
+2. Tunggu Pages selesai deploy.
+3. Buka website dengan Ctrl+Shift+R.
+4. Login kelas.
+5. Upload foto/video.
+6. Buka admin-login.html dan login admin.
+7. Setujui upload.
+8. Kembali ke website. Foto/video approved akan dibaca dari Firestore dan URL Cloudinary, jadi dapat dilihat perangkat/orang lain.
+
+CATATAN
+Jika upload gagal, website sekarang menampilkan error asli (mis. permission-denied atau error Cloudinary), bukan pesan generik.
